@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- comentario-->
+    <title>MVC</title>
+    <meta charset="UTF-8" />
+    <style>
+        h1 {
+            background-color: purple;
+        }
+
+        #titulo2azul {
+            background-color: blue;
+        }
+
+        /*
+            nav{
+                background-color: silver;
+            }
+            section{
+                background: green;
+            }*/
+        #caja_principal {
+            width: 960px;
+            margin: 15px auto;
+            text-align: center;
+
+        }
+
+        #cabecera {
+            background: #FFFBB9;
+            border: 1px;
+            padding: 20px;
+        }
+
+        #menu {
+            background: #CCCCCC;
+            padding: 5px;
+        }
+
+        #menu li {
+            display: inline-block;
+            list-style: none;
+            padding: 5px;
+            font: bold 14px verdana, sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="caja_principal">
+        <header id="cabecera">
+            <h1>Patrón Modelo Vista Controlador</h1>
+        </header>
+        <nav id="menu">
+            <ul>
+                <li>Inicio</li>
+                <li>Imagenes</li>
+                <li>Video</li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+        <section id="contenido_principal">
+            <h1>MVC</h1>
+<p>MVC (Modelo-Vista-Controlador) es un patrón en el diseño de software 
+comúnmente utilizado para implementar interfaces de usuario, datos y lógica 
+de control. Enfatiza una separación entre la lógica de negocios y su visualización. 
+Esta "separación de preocupaciones" proporciona una mejor división del trabajo y una 
+mejora de mantenimiento. Algunos otros patrones de diseño se basan en MVC, como
+ MVVM (Modelo-Vista-modelo de vista), MVP (Modelo-Vista-Presentador) y MVW (Modelo-Vista-Whatever).</p>
+             <img  src="MVC3.png" width="200" height="200"/>
+        </section>
+        <aside id="barra_lateral">
+               <h1>Contexto historico</h1>
+<p>El patrón Modelo-Vista-Controlador (MVC) surge con el objetivo de reducir el esfuerzo de programación, 
+necesario en la implementación de sistemas múltiples y sincronizados de los mismos datos, a partir de estandarizar  
+el diseño de las aplicaciones. El patrón MVC es un paradigma que divide las partes que conforman una aplicación en 
+el Modelo, las Vistas y los Controladores, permitiendo la implementación por separado de cada elemento, garantizando 
+así la actualización y mantenimiento del software de forma sencilla y en un reducido espacio de tiempo. A partir del 
+uso de frameworks basados en el patrón MVC se puede lograr una mejor organización del trabajo y mayor  especialización 
+de los desarrolladores y diseñadores.</p>
+        </aside>
+        <footer id="pie_pagina">
+
+        </footer>
+    </div>
+</body>
+
+</html>
