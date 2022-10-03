@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="365.0" prefWidth="584.0" style="-fx-background-image: url(&quot;https://imcp.org.mx/wp-content/uploads/2021/09/HOSPITAL-PRIVADO-HABITACI%C3%93N.jpg&quot;); -fx-background-position: center;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modelo.CitaController">
+   <children>
+      <Label layoutX="216.0" layoutY="25.0" style="-fx-alignment: center;" text="Agendar cita">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="81.0" text="Nombre" />
+      <Label layoutX="70.0" layoutY="139.0" text="Direccion " />
+      <Label layoutX="69.0" layoutY="200.0" text="Correo Electronico" />
+      <Label layoutX="73.0" layoutY="260.0" text="Numero telefonico" />
+      <TextField fx:id="txtNombre" layoutX="68.0" layoutY="104.0" />
+      <TextField fx:id="txtDireccion" layoutX="68.0" layoutY="164.0" />
+      <TextField fx:id="txtCorreo" layoutX="68.0" layoutY="225.0" />
+      <TextField fx:id="txtNumero" layoutX="68.0" layoutY="287.0" />
+      <Label layoutX="295.0" layoutY="81.0" text="Descripción" />
+      <TextArea fx:id="txtDescripcion" layoutX="292.0" layoutY="106.0" prefHeight="66.0" prefWidth="252.0" />
+      <MenuBar prefHeight="0.0" prefWidth="584.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cerrarAplicacion" text="Cerrar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Eliminar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="botonAgendar" layoutX="343.0" layoutY="287.0" mnemonicParsing="false" onAction="#agendarCita" prefHeight="25.0" prefWidth="70.0" text="Agendar " />
+      <Label layoutX="295.0" layoutY="229.0" text="Hora" />
+      <TextField fx:id="txtHora" layoutX="344.0" layoutY="225.0" prefHeight="25.0" prefWidth="62.0" />
+      <Label layoutX="294.0" layoutY="192.0" text="Fecha" />
+      <TextField fx:id="txtFecha" layoutX="344.0" layoutY="188.0" />
+   </children>
+</AnchorPane>

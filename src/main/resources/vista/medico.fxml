@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="455.0" prefWidth="660.0" style="-fx-background-image: url(&quot;https://imcp.org.mx/wp-content/uploads/2021/09/HOSPITAL-PRIVADO-HABITACI%C3%93N.jpg&quot;); -fx-background-position: center;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="modelo.MedicoController">
+   <children>
+      <TableView fx:id="tablaPacientes" layoutX="29.0" layoutY="143.0" prefHeight="228.0" prefWidth="602.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="nom" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="dir" prefWidth="75.0" text="Direccion" />
+            <TableColumn fx:id="email" prefWidth="75.0" text="Correo" />
+            <TableColumn fx:id="cel" prefWidth="75.0" text="Celular" />
+            <TableColumn fx:id="des" prefWidth="75.0" text="Descripción" />
+            <TableColumn fx:id="fec" prefWidth="75.0" text="Fecha " />
+            <TableColumn fx:id="hor" prefWidth="75.0" text="Hora" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
