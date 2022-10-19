@@ -79,7 +79,7 @@ public class MedicoController implements Initializable
                     paciente.setDescripcion(resultSet.getString("descripcion"));
                     paciente.setFecha(resultSet.getString("fecha"));
                     paciente.setHora(resultSet.getString("hora"));
-                    //por cada fila creamos una nueva collecion
+                    //por cada fila creamos una nueva colecion
                     coleccion.put(colId, String.valueOf(resultSet.getInt("id")));
                     coleccion.put(colNombre, paciente.getNombre());
                     coleccion.put(colDir, paciente.getDireccion());
