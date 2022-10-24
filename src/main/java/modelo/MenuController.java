@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -57,7 +58,6 @@ public class MenuController implements Initializable
         {
             Logger.getLogger(MenuController.class.getName()).log(Level.SEVERE, null, ex);
         } 
-        
     }
 
     @FXML
@@ -79,7 +79,10 @@ public class MenuController implements Initializable
         {
             Logger.getLogger(MenuController.class.getName()).log(Level.SEVERE, null, ex);
         } 
-        
+    }
+     @FXML
+    private void cerrarVentana(ActionEvent event) {
+        Platform.exit();
     }
 }
 

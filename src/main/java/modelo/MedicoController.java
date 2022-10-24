@@ -100,8 +100,7 @@ public class MedicoController implements Initializable
        }
     
     private void llenarTabla()
-    {
-        
+    {  
         ObservableList<Map> lista = getTodosPacientes();
         this.id.setCellValueFactory(new MapValueFactory(colId));
         this.nom.setCellValueFactory(new MapValueFactory(colNombre));
@@ -111,8 +110,7 @@ public class MedicoController implements Initializable
         this.des.setCellValueFactory(new MapValueFactory(colDescripcion));
         this.fec.setCellValueFactory(new MapValueFactory(colFecha));
         this.hor.setCellValueFactory(new MapValueFactory(colHora));
-        this.tablaPacientes.setItems(lista);
-        
+        this.tablaPacientes.setItems(lista);  
     }
     
 }

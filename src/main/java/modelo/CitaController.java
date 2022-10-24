@@ -10,7 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import java.sql.*;
+import java.time.format.DateTimeFormatter;
 import javafx.application.Platform;
+import javafx.scene.control.DatePicker;
 import javax.swing.JOptionPane;
 
 /**
@@ -33,14 +35,16 @@ public class CitaController implements Initializable {
     @FXML
     private TextField txtHora;
     @FXML
-    private TextField txtFecha;
-    @FXML
     private Button botonAgendar;
+    @FXML
+    private DatePicker txtFecha;
+ 
  
 
     /**
      * Initializes the controller class.
      */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) 
     {
@@ -57,7 +61,7 @@ public class CitaController implements Initializable {
     correo = txtCorreo.getText();
     numero = txtNumero.getText();
     descripcion = txtDescripcion.getText();
-    fecha = txtFecha.getText();
+    fecha = txtFecha.getValue().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
     hora = txtHora.getText();
     //Todos los campos se tiene que llenar forzosamente
     if(nombre.equals(""))
@@ -92,7 +96,7 @@ public class CitaController implements Initializable {
             {
                 Connection cn = ConexionBD.conectar();
                  PreparedStatement pst = cn.prepareStatement(
-                         "select nombre from paciente where nombre = '" + nombre + "'");
+                         "select nombre from paciente where Fecha = '" + fecha + "'");
                  ResultSet rs = pst.executeQuery();
                  if (rs.next()) 
                  {
@@ -144,7 +148,7 @@ public void Limpiar()
     txtCorreo.setText("");
     txtNumero.setText("");
     txtDescripcion.setText("");
-    txtFecha.setText("");
+    txtFecha.getEditor().clear();
     txtHora.setText("");
 }    
 
